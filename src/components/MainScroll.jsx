@@ -1,46 +1,56 @@
-import { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const MainScroll = () => {
   const container = useRef();
 
-  useGSAP(() => {
-    gsap.to(".box", {
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".box",
-        pin: true,
-        horizontal: true,
-        scrub: 1,
-      },
-    });
-  });
+  useGSAP(
+    () => {
+      const sections = gsap.utils.toArray(".panel");
+
+      // console.log(section);
+
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.current,
+          pin: true,
+          scrub: 1,
+          // snap: 1 / (sections.length - 1),
+          end: () =>
+            "+=" + document.querySelector("#mainContainer").offsetWidth,
+        },
+      });
+    },
+    { scope: container }
+  );
 
   return (
-    <main ref={container} id="container box">
-      {/* ---------- section 01 ---------- */}
-      <section className="horizontal-section">
-        <h1 className="heading">Horizontal Scroll</h1>
+    <>
+      <section
+        ref={container}
+        id="mainContainer"
+        className="flex h-screen overflow-x-hidden"
+      >
+        {/* Added overflow-x-auto */}
+        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-green-400 panel">
+          ONE
+        </div>
+        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-yellow-400 panel">
+          TWO
+        </div>
+        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-blue-400 panel">
+          THREE
+        </div>
+        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-pink-400 panel">
+          FOUR
+        </div>
       </section>
-
-      {/* ---------- section 02 ---------- */}
-      <section className="horizontal-section">
-        <h1 className="heading">01</h1>
-      </section>
-
-      {/* ---------- section 02 ---------- */}
-      <section className="horizontal-section">
-        <h1 className="heading">02</h1>
-      </section>
-
-      {/* ---------- section 03 ---------- */}
-      <section className="horizontal-section">
-        <h1 className="heading">03</h1>
-      </section>
-    </main>
+    </>
   );
 };
 
