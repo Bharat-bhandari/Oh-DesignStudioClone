@@ -10,7 +10,7 @@ const Portfolio = () => {
   return (
     <Fragment>
       <div className="flex items-center justify-center h-screen">
-        <div className="w-full h-[80%] ">
+        <div className="w-full h-[80%] bg-white ">
           <div className="grid h-full grid-cols-3 grid-rows-2 ">
             {/* <div className="h-[50vh]">
               <img className="object-cover w-full h-full" src={p1} alt="" />

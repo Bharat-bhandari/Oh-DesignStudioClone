@@ -4,8 +4,8 @@ import { IoChevronForwardCircleOutline } from "react-icons/io5";
 const Thoughts = () => {
   return (
     <Fragment>
-      <div className="flex items-center justify-center h-screen">
-        <div className="w-full h-[80%]">
+      <div className="flex items-center justify-center h-screen ">
+        <div className="w-full h-[80%] bg-white">
           <div className="m-20">
             <div>
               <div className="font-semibold text-gray-400 text-7xl">

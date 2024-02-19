@@ -5,14 +5,48 @@ import { useGSAP } from "@gsap/react";
 
 const AboutUsTwo = () => {
   const container = useRef();
-  useGSAP(
-    //
-    { scope: container }
-  );
+
+  const onMouseEnter = () => {
+    const tl = gsap.timeline();
+
+    tl.to(".firstele", { opacity: 1 })
+      .to(
+        ".firstLine",
+        {
+          scaleX: 18, // Increase the width of the line to ten times on hover
+          transformOrigin: "right center",
+          ease: "none",
+          opacity: 0.5,
+          duration: 0.5, // Keep the same duration for line animation
+        },
+        0
+      ) // Start at the same time as previous animation
+      .to(
+        ".firstNumber",
+        {
+          x: -72,
+          ease: "none",
+          duration: 0.5, // Keep the same duration for number animation
+        },
+        0
+      ); // Start at the same time as previous animation
+  };
+
+  const onMouseLeave = () => {
+    const tl = gsap.timeline();
+
+    tl.to(".firstele", { opacity: 0.25 });
+
+    tl.to(".firstLine", { scaleX: 1, duration: 1, opacity: 0 }, 0); // Revert line width to original size
+    tl.to(".firstNumber", { x: 0, duration: 1 }, 0); // Revert number position to original
+  };
 
   return (
     <Fragment>
-      <div className="flex items-center justify-center h-screen">
+      <div
+        ref={container}
+        className="flex items-center justify-center h-screen"
+      >
         <div className="h-[80%] bg-[#fff500] ">
           <div className="p-20">
             <div className="grid grid-cols-11">
@@ -22,14 +56,23 @@ const AboutUsTwo = () => {
                 </div>
               </div>
               <div ref={container} className="col-span-6 pl-4 text-gray-500 ">
-                <div className="flex flex-col gap-20 pl-20">
-                  <div className="flex opacity-25 ele">
-                    <div className="">01</div>
-                    <div className="hidden">-</div>
-                    <div className="pl-8 text-5xl font-semibold">
+                <div className="flex flex-col gap-20 pl-20 ">
+                  {/* 1st */}
+                  <div className="flex opacity-25 firstele">
+                    <div className="firstNumber">01</div>
+                    <div className="font-extrabold opacity-0 firstLine size-1">
+                      -
+                    </div>
+                    <div
+                      className="pl-8 text-5xl font-semibold cursor-pointer"
+                      onMouseEnter={onMouseEnter}
+                      onMouseLeave={onMouseLeave}
+                    >
                       Branding & Design
                     </div>
                   </div>
+                  {/* 1st */}
+
                   <div className="flex opacity-25">
                     <div className="">02</div>
                     <div className="hidden">-</div>

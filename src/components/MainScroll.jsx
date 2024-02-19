@@ -32,7 +32,7 @@ const MainScroll = () => {
           trigger: container.current,
           pin: true,
           // pinSpacing: false,
-          scrub: 1,
+          scrub: 2,
           // snap: 1 / (sections.length - 1),
           end: () =>
             "+=" + document.querySelector("#mainContainer").offsetWidth,

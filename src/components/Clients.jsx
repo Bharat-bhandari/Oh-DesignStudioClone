@@ -6,7 +6,7 @@ const Clients = () => {
   return (
     <Fragment>
       <div className="flex items-center justify-center h-screen">
-        <div className="w-full h-[80%]  flex flex-col justify-center items-center">
+        <div className="w-full h-[80%]  bg-white flex flex-col justify-center items-center">
           <div className="font-semibold text-gray-400 text-7xl"> Clients</div>
           <div>
             <img src={c1} alt="" />

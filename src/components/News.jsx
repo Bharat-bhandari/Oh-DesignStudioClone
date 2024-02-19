@@ -9,7 +9,7 @@ const News = () => {
   return (
     <Fragment>
       <div className="flex items-center justify-center h-screen">
-        <div className="w-full h-[80%] ">
+        <div className="w-full h-[80%]  bg-white">
           <div className="m-20">
             <div>
               <div className="font-semibold text-gray-400 text-7xl">News</div>

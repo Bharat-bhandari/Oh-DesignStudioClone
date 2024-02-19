@@ -9,7 +9,7 @@ import logo from "../assets/images/logo.jpg";
 const HomeSliders = () => {
   return (
     <div className="flex items-center justify-center h-screen ">
-      <div className="h-[80%] w-full">
+      <div className="h-[80%] bg-white w-full">
         <div className="relative flex flex-col justify-center w-full h-full">
           {/* <div className="flex items-center justify-between">
           <img src={logo} alt="" />

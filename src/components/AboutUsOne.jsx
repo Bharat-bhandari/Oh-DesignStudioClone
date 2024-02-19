@@ -6,7 +6,7 @@ const AboutUsOne = () => {
   return (
     <Fragment>
       <div className="flex items-center justify-center h-screen">
-        <div className="grid w-full h-[80%] grid-cols-12">
+        <div className="grid w-full h-[80%] bg-white grid-cols-12">
           <div className="col-span-9 bg-[#fff500]">
             <div className="flex flex-col flex-wrap justify-center m-20 ">
               <div className="mb-10 font-semibold text-gray-400 text-7xl">
