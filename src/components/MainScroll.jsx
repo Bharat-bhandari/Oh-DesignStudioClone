@@ -2,6 +2,18 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import HomeSliders from "./HomeSliders";
+import logo from "../assets/images/logo.jpg";
+
+import { IoMenuOutline } from "react-icons/io5";
+import AboutUsOne from "./AboutUsOne";
+import AboutUsTwo from "./AboutUsTwo";
+import Portfolio from "./PortFolio";
+import Clients from "./Clients";
+import News from "./News";
+import Thoughts from "./Thought";
+import Nav from "./Nav";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const MainScroll = () => {
@@ -19,6 +31,7 @@ const MainScroll = () => {
         scrollTrigger: {
           trigger: container.current,
           pin: true,
+          // pinSpacing: false,
           scrub: 1,
           // snap: 1 / (sections.length - 1),
           end: () =>
@@ -31,23 +44,35 @@ const MainScroll = () => {
 
   return (
     <>
+      {/* <div className="flex items-center justify-between">
+        <img src={logo} alt="" />
+        <IoMenuOutline className="mr-10 cursor-pointer size-8" />
+      </div> */}
       <section
         ref={container}
         id="mainContainer"
-        className="flex h-screen overflow-x-hidden"
+        className="flex overflow-x-hidden"
       >
-        {/* Added overflow-x-auto */}
-        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-green-400 panel">
-          ONE
+        {/* <div className="flex-shrink-0 w-full panel ">
+          <HomeSliders />
+        </div> */}
+        <div className="flex-shrink-0 w-full panel ">
+          <AboutUsOne />
         </div>
-        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-yellow-400 panel">
-          TWO
+        <div className="flex-shrink-0 w-full panel ">
+          <AboutUsTwo />
         </div>
-        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-blue-400 panel">
-          THREE
+        <div className="flex-shrink-0 w-full panel ">
+          <Portfolio />
         </div>
-        <div className="flex items-center justify-center flex-shrink-0 w-full text-5xl text-white bg-pink-400 panel">
-          FOUR
+        <div className="flex-shrink-0 w-full panel ">
+          <News />
+        </div>
+        <div className="flex-shrink-0 w-full panel ">
+          <Thoughts />
+        </div>
+        <div className="flex-shrink-0 w-full panel ">
+          <Nav />
         </div>
       </section>
     </>
