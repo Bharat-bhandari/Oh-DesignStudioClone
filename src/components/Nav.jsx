@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -21,12 +21,13 @@ const Nav = () => {
   };
 
   return (
-    <div ref={container} className="flex items-center justify-center h-screen">
-      <div className="w-full h-[80%] flex justify-center items-center">
+    <div ref={container} className="flex items-center justify-center h-full ">
+      <div className="flex items-center justify-center w-full ">
         <div>
-          <div className="overflow-hidden tracking-tighter text-9xl">
+          <div className="overflow-hidden tracking-tighter text-8xl">
             <a
-              href=""
+              // href="/about-us"
+              href="/pages"
               className="relative about"
               onMouseEnter={() => onMouseEnter("about")}
               onMouseLeave={() => onMouseLeave("about")}
@@ -35,9 +36,10 @@ const Nav = () => {
               <div className="bg-[#fff500] absolute w-[35rem]  h-full top-0 left-0 -z-10 overlay"></div>
             </a>
           </div>
-          <div className="overflow-hidden tracking-tighter text-9xl">
+          <div className="overflow-hidden tracking-tighter text-8xl">
             <a
-              href=""
+              // href="/"
+              href="/pages"
               className="relative contact"
               onMouseEnter={() => onMouseEnter("contact")}
               onMouseLeave={() => onMouseLeave("contact")}
@@ -46,20 +48,22 @@ const Nav = () => {
               <div className="bg-[#fff500] absolute w-[35rem]  h-full top-0 left-0 -z-10 overlay"></div>
             </a>
           </div>
-          <div className="overflow-hidden tracking-tighter text-9xl">
+          <div className="overflow-hidden tracking-tighter text-8xl">
             <a
-              href=""
+              // href="/thoughts"
+              href="/pages"
               className="relative print "
               onMouseEnter={() => onMouseEnter("print")}
               onMouseLeave={() => onMouseLeave("print")}
             >
-              <span className="z-10 px-4 text">Print.</span>
+              <span className="z-10 px-4 text">Thought.</span>
               <div className="bg-[#fff500] absolute w-[35rem]  h-full top-0 left-0 -z-10 overlay"></div>
             </a>
           </div>
-          <div className="overflow-hidden tracking-tighter text-9xl">
+          <div className="overflow-hidden tracking-tighter text-8xl">
             <a
-              href=""
+              // href="/portfolio"
+              href="/pages"
               className="relative portfolio"
               onMouseEnter={() => onMouseEnter("portfolio")}
               onMouseLeave={() => onMouseLeave("portfolio")}
@@ -68,9 +72,10 @@ const Nav = () => {
               <div className="bg-[#fff500] absolute w-[35rem]  h-full top-0 left-0 -z-10 overlay"></div>
             </a>
           </div>
-          <div className="overflow-hidden tracking-tighter text-9xl">
+          <div className="overflow-hidden tracking-tighter text-8xl">
             <a
-              href=""
+              // href="/news"
+              href="/pages"
               className="relative news"
               onMouseEnter={() => onMouseEnter("news")}
               onMouseLeave={() => onMouseLeave("news")}
