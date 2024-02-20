@@ -36,7 +36,7 @@ const AboutUsTwo = () => {
   const onMouseLeave = (className) => {
     const tl = gsap.timeline();
 
-    tl.to(`.${className} `, { opacity: 0.3 });
+    tl.to(`.${className} `, { opacity: 0.5 });
 
     tl.to(`.${className} .line`, { scaleX: 1, duration: 1, opacity: 0 }, 0); // Revert line width to original size
     tl.to(`.${className} .number`, { x: 0, duration: 1 }, 0); // Revert number position to original
@@ -73,7 +73,6 @@ const AboutUsTwo = () => {
                     </div>
                   </div>
                   {/* 1st */}
-
                   {/* 2nd */}
                   <div className="flex opacity-50 second">
                     <div className="number">02</div>
