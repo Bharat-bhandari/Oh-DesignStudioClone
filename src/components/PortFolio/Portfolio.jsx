@@ -41,10 +41,10 @@ const Portfolio = () => {
             </div>
             <div className="">
               <div className="flex flex-col m-8">
-                <div className="text-4xl font-semibold text-gray-500">
+                <div className="text-5xl font-semibold text-gray-500">
                   PROJECTS TO BE DISCUSSED HERE
                 </div>
-                <div className="mt-4 text-sm font-semibold">
+                <div className="mt-4 text-base font-semibold">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
                   ad laboriosam nostrum eligendi similique placeat porro magni,
                   ipsa fugiat.

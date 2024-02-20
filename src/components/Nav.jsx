@@ -38,7 +38,6 @@ const Nav = () => {
           </div>
           <div className="overflow-hidden tracking-tighter text-8xl">
             <a
-              // href="/"
               href="/pages"
               className="relative contact"
               onMouseEnter={() => onMouseEnter("contact")}

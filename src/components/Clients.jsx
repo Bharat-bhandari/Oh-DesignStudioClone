@@ -7,9 +7,9 @@ const Clients = () => {
     <Fragment>
       <div className="flex-shrink-0 w-full h-full panel ">
         <div className="w-full h-full px-16 pt-12 pb-16">
-          <div className="text-6xl font-semibold text-gray-400"> Clients</div>
-          <div className="mx-20 my-8">
-            <img src={c1} alt="" />
+          <div className="font-semibold text-gray-400 text-7xl"> Clients</div>
+          <div className="mx-20 my-12">
+            <img src={c1} alt="" className="w-full h-full" />
           </div>
         </div>
       </div>

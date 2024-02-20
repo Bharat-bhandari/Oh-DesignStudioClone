@@ -25,7 +25,7 @@ const RootLayout = () => {
           trigger: container.current,
           pin: true,
           pinSpacer: false,
-          snap: 1 / (sections.length - 1),
+          // snap: 1 / (sections.length - 1),
           scrub: 1,
           end: () =>
             "+=" + document.querySelector("#mainContainer").offsetWidth,

@@ -6,10 +6,10 @@ const AboutUsOne = () => {
   return (
     <Fragment>
       <div className="flex-shrink-0 w-full h-full overflow-hidden panel">
-        <div className="grid w-full h-full grid-cols-4 bg-[#fff500] ">
-          <div className="col-span-3">
+        <div className="grid w-full h-full grid-cols-10 bg-[#fff500] ">
+          <div className="col-span-7">
             <div className="flex flex-col flex-wrap justify-center mx-16 mt-16 mb-12 ">
-              <div className="mb-10 text-5xl font-semibold text-gray-400">
+              <div className="mb-10 font-semibold text-gray-400 text-8xl">
                 Character is a branding and design agency with studios in New
                 York and San Francisco.
               </div>
@@ -20,14 +20,14 @@ const AboutUsOne = () => {
                 become more complex, consumer behavior has shifted, and we, as a
                 company, have evolved with those changes along with it.
               </div>
-              <div className="flex items-center mt-4 font-semibold">
+              <div className="flex items-center mt-3 font-semibold">
                 <div className="pr-3 text-black">ABOUT US</div>
                 <IoChevronForwardCircleOutline />
               </div>
             </div>
           </div>
-          <div className="w-full h-full col-span-1 justify-self-end">
-            <img src={au1} className="object-contain w-full h-full" alt="" />
+          <div className="w-full h-full col-span-3 justify-self-end">
+            <img src={au1} className="object-cover w-full h-full" alt="" />
           </div>
         </div>
       </div>

@@ -44,15 +44,15 @@ const AboutUsTwo = () => {
     <Fragment>
       <div ref={container} className="flex-shrink-0 w-full h-full panel">
         <div className="w-full h-full bg-[#fff500] ">
-          <div className="p-16">
+          <div className="p-24">
             <div className="grid grid-cols-11">
               <div className="col-span-2 ">
-                <div className="pr-12 text-xl font-medium text-right text-gray-500 ">
+                <div className="pr-12 text-2xl font-medium text-right text-gray-500 ">
                   Capabilities
                 </div>
               </div>
               <div ref={container} className="col-span-6 pl-4 text-gray-500 ">
-                <div className="flex flex-col gap-16 pl-20">
+                <div className="flex flex-col gap-24 pl-20">
                   {/* 1st */}
                   <div className="flex opacity-50 first">
                     <div className="number">01</div>
@@ -60,7 +60,7 @@ const AboutUsTwo = () => {
                       -
                     </div>
                     <div
-                      className="pl-8 text-5xl font-semibold cursor-pointer"
+                      className="pl-8 text-6xl font-semibold cursor-pointer"
                       onMouseEnter={() => onMouseEnter("first")}
                       onMouseLeave={() => onMouseLeave("first")}
                     >
@@ -74,7 +74,7 @@ const AboutUsTwo = () => {
                       -
                     </div>
                     <div
-                      className="pl-8 text-5xl font-semibold cursor-pointer"
+                      className="pl-8 text-6xl font-semibold cursor-pointer"
                       onMouseEnter={() => onMouseEnter("second")}
                       onMouseLeave={() => onMouseLeave("second")}
                     >
@@ -88,7 +88,7 @@ const AboutUsTwo = () => {
                       -
                     </div>
                     <div
-                      className="pl-8 text-5xl font-semibold cursor-pointer"
+                      className="pl-8 text-6xl font-semibold cursor-pointer"
                       onMouseEnter={() => onMouseEnter("third")}
                       onMouseLeave={() => onMouseLeave("third")}
                     >
@@ -102,7 +102,7 @@ const AboutUsTwo = () => {
                       -
                     </div>
                     <div
-                      className="pl-8 text-5xl font-semibold cursor-pointer"
+                      className="pl-8 text-6xl font-semibold cursor-pointer"
                       onMouseEnter={() => onMouseEnter("fourth")}
                       onMouseLeave={() => onMouseLeave("fourth")}
                     >
